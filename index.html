@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<script src="https://unpkg.com/vue"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -19,13 +19,13 @@
     <title>Appcessibility</title>
   </head>
 
-  <body>
-    <div class="container-fluid tempting-azure-gradient vh-100" style='background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);'> 
+  <body style='background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);'>
+    <div class="container-fluid tempting-azure-gradient vh-100"> 
       <div class="row align-items-center vh-100">
         <div class="col-md-3 vh-40">
         </div>
         <div class="col-md-6 align-self-center"> 
-          <form>
+          <form >
             <div class="form-group">
               <label for="businessName">What business do you want to check accessibility for today? </label>
               <input type="text" class="form-control" id="businessName" aria-describedby="businessName" placeholder="Enter business.">
@@ -33,7 +33,7 @@
               <label for="businessLocation">What city is it located in? </label>
               <input type="text" class="form-control" id="businessLocation" aria-describedby="businessLocation" placeholder="Enter city.">
             </div>
-            <button type="submit" class="btn btn-light" onclick="saveInput();">Submit</button>
+            <button type="reset" id="submit" class="btn btn-light shadow" onclick="saveInput();">Submit</button>
           </form>
         </div>
         <div class="col-md-3"></div>
