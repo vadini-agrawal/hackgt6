@@ -1,3 +1,17 @@
+function createAddItemWindow() {
+  //Create new window
+  addItemWindown = new BrowserWindow({
+      width: 300,
+      height: 200,
+      title: 'Add Item',
+  
+      //The lines below solved the issue
+      webPreferences: {
+          nodeIntegration: true
+      }
+  })}
+
+
 function saveInput(){
   
   var name_to_save=document.getElementById('businessName').value;
@@ -9,6 +23,28 @@ function saveInput(){
   localStorage.setItem("location", loc_to_save); // save the item
   console.log(localStorage.getItem("location"))
   loadPage();
+
+//   'use strict';
+// //C:\Users\Daivi\Documents\yelp-fusion\fusion\node
+//   const yelp = require('yelp-fusion');
+
+
+//   const apiKey = 'ohi02RCmkq2ftmq-K7gmiUIUzBYRRS4H2Cd_gHWppiwwM_UHICwC9oFveweoj0yXcHFZZyxpRbN0BAoY6bsE9cYWDl1oEabfzHJZArVDKTjHSf0nm0WnO4c2_YC0XXYx';
+
+//   const searchRequest = {
+//     term:localStorage.getItem('name'),
+//     location: localStorage.getItem('location')
+//   };
+
+//   const client = yelp.client(apiKey);
+
+//   client.search(searchRequest).then(response => {
+//     const firstResult = response.jsonBody.businesses[0]["id"];
+//     const prettyJson = JSON.stringify(firstResult, null, 4);
+//     console.log(prettyJson);
+//   }).catch(e => {
+//     console.log(e);
+//   });
   document.location.href = "results.html";
 }
 

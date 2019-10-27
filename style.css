@@ -1,3 +1,24 @@
 #full-page {
-    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%)!important;
+    background: linear-gradient(5deg, #33ccff, #ff99cc)!important;
+    background-size: 400% 400%;
+
+    -webkit-animation: BackgroundGradient 0s ease infinite;
+    -moz-animation: BackgroundGradient 0s ease infinite;
+    animation: BackgroundGradient 0s ease infinite;
 }    
+
+@-webkit-keyframes BackgroundGradient {
+    0%{background-position:0% 31%}
+    50%{background-position:100% 70%}
+    100%{background-position:0% 31%}
+}
+@-moz-keyframes BackgroundGradient {
+    0%{background-position:0% 31%}
+    50%{background-position:100% 70%}
+    100%{background-position:0% 31%}
+}
+@keyframes BackgroundGradient {
+    0%{background-position:0% 31%}
+    50%{background-position:100% 70%}
+    100%{background-position:0% 31%}
+}
